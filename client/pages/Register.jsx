@@ -1,29 +1,16 @@
-import  { useState } from "react";
+import { useState } from "react";
 // import { useHistory } from "react-router-dom";
 // import axios from "axios";
 
 const Register = () => {
-  const [userName, setUserName] = useState("");
-  const [password, setPassword] = useState("");
-//   const [error, setError] = useState("");
-//   const history = useHistory();
-
-//   const handleRegister = async () => {
-//     try {
-//       const response = await axios.post("/api/register", {
-//         userName,
-//         password,
-//       });
-//       if (response.data.success) {
-//         history.push("/");
-//       } else {
-//         setError(response.data.message);
-//       }
-//     } catch (err) {
-//       setError("Server error. Please try again later.");
-//     }
-//   };
-
+  const [name, setname] = useState("");
+  const [email, setEmail] = useState("");
+  const [mobino, setMobileno] = useState("");
+  const [desi, setDesig] = useState("");
+  const [gen, setGend] = useState("");
+  const [course, setCourse] = useState("");
+  // const [password, setPassword] = useState("");
+  
   return (
     <div>
       <h2>Register</h2>
@@ -33,8 +20,8 @@ const Register = () => {
       <input
         type="text"
         placeholder="Name"
-        value={Name}
-        onChange={(e) => setUserName(e.target.value)}
+        value={name}
+        onChange={(e) => setname(e.target.value)}
       />
       <label>
         <b>Email</b>
@@ -42,8 +29,8 @@ const Register = () => {
       <input
         type="email"
         placeholder="Email"
-        value={Email}
-        onChange={(e) => setUserName(e.target.value)}
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
       />
       <label>
         <b>Mobile No</b>
@@ -51,14 +38,14 @@ const Register = () => {
       <input
         type="number"
         placeholder="Mobileno"
-        value={Mobileno}
-        onChange={(e) => setUserName(e.target.value)}
+        value={mobino}
+        onChange={(e) => setMobileno(e.target.value)}
       />
       <label htmlFor="designation">Designation:</label>
       <select
         id="designation"
-        value={designation}
-        onChange={handleDesignationChange}
+        value={desi}
+        onChange={(e) => setDesig(e.target.value)}
       >
         <option value="" disabled>
           Select designation
@@ -68,7 +55,7 @@ const Register = () => {
         <option value="Sales">Sales</option>
       </select>
       <label htmlFor="gender">Gender:</label>
-      <select id="gender" value={gender} onChange={handleGenderChange}>
+      <select id="gender" value={gen} onChange={(e) => setGend(e.target.value)}>
         <option value="" disabled>
           Select gender
         </option>
@@ -77,7 +64,7 @@ const Register = () => {
         <option value="Other">Other</option>
       </select>
       <label htmlFor="course">Course:</label>
-      <select id="course" value={course} onChange={handleCourseChange}>
+      <select id="course" value={course} onChange={(e) => setCourse(e.target.value)}>
         <option value="" disabled>
           Select course
         </option>
@@ -95,3 +82,22 @@ const Register = () => {
 };
 
 export default Register;
+
+      //   const [error, setError] = useState("");
+      //   const history = useHistory();
+    
+      //   const handleRegister = async () => {
+      //     try {
+      //       const response = await axios.post("/api/register", {
+      //         userName,
+      //         password,
+      //       });
+      //       if (response.data.success) {
+      //         history.push("/");
+      //       } else {
+      //         setError(response.data.message);
+      //       }
+      //     } catch (err) {
+      //       setError("Server error. Please try again later.");
+      //     }
+      //   };

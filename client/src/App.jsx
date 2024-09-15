@@ -1,4 +1,6 @@
+import Dashboard from "../pages/Dashboard";
 import Homepage from "../pages/Login";
+import Register from "../pages/Register";
 
 import "./App.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
@@ -7,8 +9,16 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Homepage/>
-  }
+    element: <Homepage />,
+  },
+  {
+    path: "regi",
+    element: <Register />,
+  },
+  {
+    path: "admi",
+    element: <Dashboard />,
+  },
 ]);
 
 function App() {
